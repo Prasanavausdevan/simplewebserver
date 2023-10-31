@@ -66,7 +66,8 @@ Testing the webserver.
 ## OUTPUT:
 
 ![Alt text](<Screenshot 2023-10-25 093334.png>)
-![Screenshot 2023-10-27 143349](https://github.com/Prasanavausdevan/simplewebserver/assets/144870579/42c67e48-b31d-4ee7-8669-30d103d2c652)
+![Screenshot 2023-10-28 102415](https://github.com/Prasanavausdevan/simplewebserver/assets/144870579/26ff8f30-4301-47c6-9ce4-dee3360c6546)
+
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
