@@ -22,6 +22,8 @@ Testing the webserver.
 
 ## PROGRAM:
 ```
+from http.server import HTTPServer, BaseHTTPRequestHandler
+content = """
 <html>
 	<title>web page </title>
 <body>
@@ -60,13 +62,26 @@ Testing the webserver.
 	</table>
 </body>
 </html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',8000)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
  
 ```
 
 ## OUTPUT:
+![Screenshot 2023-11-08 085210](https://github.com/Prasanavausdevan/simplewebserver/assets/144870579/82d06baf-654b-414c-a315-443edaf9320b)
+![z](https://github.com/Prasanavausdevan/simplewebserver/assets/144870579/5cc76de5-8263-49b4-9a64-f946ba46ba5a)
 
-![Alt text](<Screenshot 2023-10-25 093334.png>)
-![Screenshot 2023-10-28 102415](https://github.com/Prasanavausdevan/simplewebserver/assets/144870579/26ff8f30-4301-47c6-9ce4-dee3360c6546)
+
 
 
 ## RESULT:
